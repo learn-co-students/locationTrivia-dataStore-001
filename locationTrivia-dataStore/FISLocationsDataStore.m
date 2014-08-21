@@ -18,4 +18,14 @@
 
     return _sharedLocationsDataStore;
 }
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _locations = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 @end

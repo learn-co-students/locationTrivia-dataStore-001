@@ -58,13 +58,19 @@
 
     [location3.trivia addObjectsFromArray:@[trivia3A]];
 
-    self.store.locations = @[location2, location1, location3];
+    self.store.locations = [NSMutableArray arrayWithArray:@[location2, location1, location3]];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -146,13 +152,16 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-
-    NSIndexPath *ip = [self.tableView indexPathForSelectedRow];
-    FISLocation *location = self.store.locations[ip.row];
-
-    FISTriviaTableViewController *triviaVC = segue.destinationViewController;
-
-    triviaVC.trivia = location.trivia;
+    if (![segue.identifier isEqualToString:@"addLocation"]) {
+        
+        NSIndexPath *ip = [self.tableView indexPathForSelectedRow];
+        FISLocation *location = self.store.locations[ip.row];
+        
+        FISTriviaTableViewController *triviaVC = segue.destinationViewController;
+        
+        triviaVC.trivia = location.trivia;
+    }
+    
 
 }
 

@@ -29,6 +29,3 @@
     5. Add a Save `UIBarButtonItem` to the new VC.
     6. On save, pop the view controller to the list, reload the data on the
        main VC.
-    
-## Extra Credit
-    * add an another adding VC for adding Trivia to a specific Location

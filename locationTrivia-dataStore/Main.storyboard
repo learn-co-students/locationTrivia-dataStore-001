@@ -1,10 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="SAR-7n-Hfp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="SAR-7n-Hfp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
+        <!--Add Location View Controller-->
+        <scene sceneID="veg-lw-oXz">
+            <objects>
+                <viewController id="f6D-hk-AEG" customClass="FISAddLocationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PkX-IZ-cWt"/>
+                        <viewControllerLayoutGuide type="bottom" id="C3P-NP-ZgB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GEl-Lf-d39">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6wj-cl-poh">
+                                <rect key="frame" x="112" y="150" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latitude" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jAI-YL-P9m">
+                                <rect key="frame" x="112" y="269" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Longitude" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dQV-dM-VCc">
+                                <rect key="frame" x="112" y="385" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="16I-Mo-GkN">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="8Il-v9-38T">
+                            <connections>
+                                <action selector="saveButton:" destination="f6D-hk-AEG" id="ek1-Gs-1cW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="locLatitude" destination="jAI-YL-P9m" id="BmY-ub-ljs"/>
+                        <outlet property="locLongitude" destination="dQV-dM-VCc" id="evQ-o3-XUG"/>
+                        <outlet property="locName" destination="6wj-cl-poh" id="Gy9-Td-s0d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4H4-5g-0To" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976" y="-549"/>
+        </scene>
         <!--Locations Table View Controller-->
         <scene sceneID="ZgT-nQ-mh5">
             <objects>
@@ -38,7 +85,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="tUP-So-DAg" kind="push" id="cYc-qr-cPS"/>
+                                    <segue destination="tUP-So-DAg" kind="push" identifier="triviaTableSegue" id="cYc-qr-cPS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -48,7 +95,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="18V-W7-rat">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PuT-mE-U89"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PuT-mE-U89">
+                            <connections>
+                                <action selector="addTriviaButton:" destination="Cmu-ZO-bCa" id="0EZ-RN-xax"/>
+                                <segue destination="f6D-hk-AEG" kind="push" identifier="addLocationSegue" id="b0h-pO-Kdh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A96-Xg-9cB" userLabel="First Responder" sceneMemberID="firstResponder"/>

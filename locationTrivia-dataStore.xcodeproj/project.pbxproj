@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		269E5F5F1B905FB200A0ADCB /* FISAddLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269E5F5E1B905FB200A0ADCB /* FISAddLocationViewController.m */; };
 		D80B85F31958A02C0042C042 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80B85F21958A02C0042C042 /* Foundation.framework */; };
 		D80B85F51958A02C0042C042 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80B85F41958A02C0042C042 /* CoreGraphics.framework */; };
 		D80B85F71958A02C0042C042 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80B85F61958A02C0042C042 /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		269E5F5D1B905FB200A0ADCB /* FISAddLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISAddLocationViewController.h; sourceTree = "<group>"; };
+		269E5F5E1B905FB200A0ADCB /* FISAddLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISAddLocationViewController.m; sourceTree = "<group>"; };
 		D80B85EF1958A02C0042C042 /* locationTrivia-dataStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "locationTrivia-dataStore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80B85F21958A02C0042C042 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D80B85F41958A02C0042C042 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -124,6 +127,8 @@
 			children = (
 				D80B86351958A0870042C042 /* FISLocationsDataManager.h */,
 				D80B86361958A0870042C042 /* FISLocationsDataManager.m */,
+				269E5F5D1B905FB200A0ADCB /* FISAddLocationViewController.h */,
+				269E5F5E1B905FB200A0ADCB /* FISAddLocationViewController.m */,
 				D80B86011958A02C0042C042 /* FISAppDelegate.h */,
 				D80B86021958A02C0042C042 /* FISAppDelegate.m */,
 				D80B86271958A0570042C042 /* Main.storyboard */,
@@ -271,6 +276,7 @@
 				D80B86341958A0570042C042 /* FISTrivia.m in Sources */,
 				D80B86371958A0870042C042 /* FISLocationsDataManager.m in Sources */,
 				D80B86331958A0570042C042 /* FISLocation.m in Sources */,
+				269E5F5F1B905FB200A0ADCB /* FISAddLocationViewController.m in Sources */,
 				D80B86321958A0570042C042 /* FISTriviaTableViewController.m in Sources */,
 				D80B86031958A02C0042C042 /* FISAppDelegate.m in Sources */,
 				D80B86311958A0570042C042 /* FISLocationsTableViewController.m in Sources */,

@@ -73,7 +73,7 @@ This next lab already has these steps set up for you. Take a moment to look over
 ## Instructions
 
   1. Create a new `UIViewController` for making `FISLocation` objects called `FISAddLocationViewController`. 
-  2. Segue to this new view controller by adding a `UIBarButtonItem` with style 'Add' (the plus sign) on your `FISLocationsTableViewController`.
+  2. Segue to this new view controller by adding a `UIBarButtonItem` with style 'Add' (the plus sign) on your `FISLocationsTableViewController`. **Make it a `modal` segue.**
      - make an outlet for your bar button, and in `viewDidLoad`, set it's `accessibilityLabel` as "addButton" like so:
      - `self.addButton.accessibilityLabel = @"addButton"`
      - **What does this do?** This makes it so that the testing suite can access your button. *Get used to doing this.*
@@ -84,6 +84,6 @@ This next lab already has these steps set up for you. Take a moment to look over
   	- creates a `FISLocation` object with the data in the text fields, 
   	- pops the `FISAddLocationViewController` so that `FISLocationsTableViewController` reappears and 
   	- reloads to include displaying the new `FISLocation` object.
-  5. Add another `UIButton` titled "Cancel", in case someone gets into your AddLocationVC, but doesn't want to save a new location.
+  5. Add another `UIButton` titled "Cancel", which simply dismisses the addLocationVC in case someone navigates in there, but doesn't want to save a new location.
     - You guessed it, set it's accessibilityLabel to `@"cancelButton"`.
   6. Run your application and make some new locations through the simulator. Watch the data get passed between your view controllers. **Run the tests!**

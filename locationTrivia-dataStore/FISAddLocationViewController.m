@@ -14,8 +14,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *latitudeField;
 @property (weak, nonatomic) IBOutlet UITextField *longitudeField;
-- (IBAction)submitButtonTapped:(id)sender;
+- (IBAction)saveButtonTapped:(id)sender;
 - (IBAction)cancelButtonTapped:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 
 @end
 
@@ -24,27 +27,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setupAccessibilityLabels];
 }
 
-- (void)didReceiveMemoryWarning
+-(void) setupAccessibilityLabels
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.nameField.accessibilityLabel = @"nameField";
+    self.nameField.accessibilityIdentifier = @"nameField";
+    
+    self.latitudeField.accessibilityLabel = @"latitudeField";
+    self.latitudeField.accessibilityIdentifier = @"latitudeField";
+    
+    self.longitudeField.accessibilityLabel = @"longitudeField";
+    self.longitudeField.accessibilityIdentifier = @"longitudeField";
+    
+    self.saveButton.accessibilityLabel = @"saveButton";
+    self.saveButton.accessibilityIdentifier = @"saveButton";
+    
+    self.cancelButton.accessibilityLabel = @"cancelButton";
+    self.cancelButton.accessibilityIdentifier = @"cancelButton";
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)submitButtonTapped:(id)sender {
+- (IBAction)saveButtonTapped:(id)sender {
     NSNumber *latitude = [NSNumber numberWithInteger:[self.latitudeField.text integerValue]];
     NSNumber *longitude = [NSNumber numberWithInteger:[self.longitudeField.text integerValue]];
     FISLocation *newLocation = [[FISLocation alloc] initWithName:self.nameField.text Latitude:latitude Longitude:longitude];

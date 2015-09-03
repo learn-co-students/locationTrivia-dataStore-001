@@ -91,11 +91,11 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6d5-9p-VH7">
                                 <rect key="frame" x="20" y="243" width="280" height="30"/>
-                                <state key="normal" title="Submit">
+                                <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitButtonTapped:" destination="Dom-NK-sD9" eventType="touchUpInside" id="cnb-vw-Ref"/>
+                                    <action selector="saveButtonTapped:" destination="Dom-NK-sD9" eventType="touchUpInside" id="qZ8-Yf-AJj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apu-Sa-2Z9">
@@ -111,9 +111,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="Apu-Sa-2Z9" id="Vyc-4C-t7a"/>
                         <outlet property="latitudeField" destination="rCh-p0-95b" id="RJ3-RV-Run"/>
                         <outlet property="longitudeField" destination="4V2-b3-c2F" id="FSz-5i-5hR"/>
                         <outlet property="nameField" destination="5a8-ws-1Dw" id="kb6-56-yhZ"/>
+                        <outlet property="saveButton" destination="6d5-9p-VH7" id="Kvn-1e-kjf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cj1-dy-OyY" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -26,6 +26,7 @@
 		D80B86331958A0570042C042 /* FISLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B862D1958A0570042C042 /* FISLocation.m */; };
 		D80B86341958A0570042C042 /* FISTrivia.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B862F1958A0570042C042 /* FISTrivia.m */; };
 		D80B86371958A0870042C042 /* FISLocationsDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B86361958A0870042C042 /* FISLocationsDataStore.m */; };
+		E24CC6351B98A5080021826F /* FISAddLocationViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E24CC6341B98A5080021826F /* FISAddLocationViewControllerSpec.m */; };
 		E25C89621B9891260086530A /* FISLocationsTableViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E25C89611B9891260086530A /* FISLocationsTableViewControllerSpec.m */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		D80B862F1958A0570042C042 /* FISTrivia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISTrivia.m; sourceTree = "<group>"; };
 		D80B86351958A0870042C042 /* FISLocationsDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISLocationsDataStore.h; sourceTree = "<group>"; };
 		D80B86361958A0870042C042 /* FISLocationsDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISLocationsDataStore.m; sourceTree = "<group>"; };
+		E24CC6341B98A5080021826F /* FISAddLocationViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISAddLocationViewControllerSpec.m; sourceTree = "<group>"; };
 		E25C89611B9891260086530A /* FISLocationsTableViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISLocationsTableViewControllerSpec.m; sourceTree = "<group>"; };
 		F5468F7A33F1ABB7D78F5429 /* libPods-locationTrivia-dataStoreTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-locationTrivia-dataStoreTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -178,8 +180,9 @@
 		D80B86171958A02C0042C042 /* locationTrivia-dataStoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				D80B86181958A02C0042C042 /* Supporting Files */,
 				E25C89611B9891260086530A /* FISLocationsTableViewControllerSpec.m */,
+				E24CC6341B98A5080021826F /* FISAddLocationViewControllerSpec.m */,
+				D80B86181958A02C0042C042 /* Supporting Files */,
 			);
 			path = "locationTrivia-dataStoreTests";
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E25C89621B9891260086530A /* FISLocationsTableViewControllerSpec.m in Sources */,
+				E24CC6351B98A5080021826F /* FISAddLocationViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

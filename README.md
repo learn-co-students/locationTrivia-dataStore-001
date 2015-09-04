@@ -72,12 +72,18 @@ This next lab already has these steps set up for you. Take a moment to look over
 
 ## Instructions
 
-  **No tests for this one**
-
-  1. Add a new `UIViewController` for creating `FISLocation` objects called `FISAddLocationViewController`. Segue to this new view controller from the `UIBarButtonItem` with style 'Add' (the plus sign) on the `FISLocationsTableViewController`
-  1. Add three `UITextField`s to the new `FISAddLocationViewController` for setting the Name, Latitude, and Longitude properties on the `FISLocation` object to be created.
-  1. Add a `UIBarButtonItem` with style 'Save' to the `FISAddLocationViewController` which:
+  1. Create a new `UIViewController` for making `FISLocation` objects called `FISAddLocationViewController`. 
+  2. Segue to this new view controller by adding a `UIBarButtonItem` with style 'Add' (the plus sign) on your `FISLocationsTableViewController`. **Make it a `modal` segue.**
+     - make an outlet for your bar button, and in `viewDidLoad`, set it's `accessibilityLabel` as "addButton" like so:
+     - `self.addButton.accessibilityLabel = @"addButton"`
+     - **What does this do?** This makes it so that the testing suite can access your button. *Get used to doing this.*
+  3. Add three `UITextField`s to the new `FISAddLocationViewController` for setting the Name, Latitude, and Longitude properties on the `FISLocation` object to be created.
+     - set their accessibility labels to `@"nameField"`, `@"latitudeField"`, and `@"longitudeField"`, respectively. If you forgot how, see the previous step.
+  4. Add a `UIButton` titled "Save" to your AddLocationVC which:
+   - has accessibilityLabel set to `@"saveButton"`,
   	- creates a `FISLocation` object with the data in the text fields, 
   	- pops the `FISAddLocationViewController` so that `FISLocationsTableViewController` reappears and 
   	- reloads to include displaying the new `FISLocation` object.
-  1. Run your application and make some new locations through the simulator. Watch the data get passed between your view controllers.
+  5. Add another `UIButton` titled "Cancel", which simply dismisses the addLocationVC in case someone navigates in there, but doesn't want to save a new location.
+    - You guessed it, set it's accessibilityLabel to `@"cancelButton"`.
+  6. Run your application and make some new locations through the simulator. Watch the data get passed between your view controllers. **Run the tests!**

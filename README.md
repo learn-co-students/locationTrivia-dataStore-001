@@ -1,3 +1,7 @@
+DEPRECATED Oct 13, 2015 - Mark Murray
+
+This lab has been incorporated into a single lab in locationTrivia-DataStoreRelationships and is no longer on an active track.
+
 # Location Trivia Data Manager
 
 ## Goals
